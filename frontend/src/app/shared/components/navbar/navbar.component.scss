@@ -1,0 +1,42 @@
+.nav {
+  text-transform: capitalize;
+  &-logo {
+    margin: 2rem;
+    width: 50px;
+    padding-bottom: 4rem;
+  }
+
+  &-anchor {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1.5rem 1rem;
+  }
+
+  &-item {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: #204cd3;
+      border-bottom-left-radius: 100vw;
+      border-top-left-radius: 100vw;
+      & a {
+        color: white;
+      }
+    }
+    &.selected {
+      background-color: #204cd3;
+      border-bottom-left-radius: 100vw;
+      border-top-left-radius: 100vw;
+      & a {
+        color: white;
+      }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: rgb(229, 229, 229);
+    font-size: 20px;
+  }
+}

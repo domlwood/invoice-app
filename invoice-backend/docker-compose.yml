@@ -1,0 +1,28 @@
+version: "3"
+services:
+  strapi:
+    image: strapi/strapi
+    environment:
+      HOST: ${HOST}
+      PORT: ${PORT}
+      DATABASE_CLIENT: ${DB_CLIENT}
+      DATABASE_NAME: ${DB_NAME}
+      DATABASE_HOST: postgres
+      DATABASE_PORT: ${DB_PORT}
+      DATABASE_USERNAME: ${DB_USER}
+      DATABASE_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./src:/srv/src
+    ports:
+      - "${PORT}:${PORT}"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./data:/var/lib/postgresql/data

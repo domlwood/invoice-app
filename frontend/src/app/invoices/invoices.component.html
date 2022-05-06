@@ -1,0 +1,29 @@
+<app-invoice-create-container class="invoice-create-popup"></app-invoice-create-container>
+<div class="container">
+  <div class="header">
+    <h1>Payments</h1>
+  </div>
+  <div class="first-row">
+    <div class="column-one" *ngIf="invoices">
+      <app-invoice-recieved [invoices]="invoices"></app-invoice-recieved>
+    </div>
+    <div class="column-two">
+      <app-invoice-publicnote></app-invoice-publicnote>
+    </div>
+  </div>
+  <div class="invoice-create">
+    <div class="invoice-title-section">
+      <h1>Invoices</h1>
+      <p>List of all of your recent transactions.</p>
+    </div>
+    <div class="invoice-create-section">
+      <button (click)="displayInvoiceCreatePopup()" class="invoice-create-button">+ new invoice</button>
+    </div>
+  </div>
+  <div class="invoice-search">
+    <app-invoice-search [(inputModel)]="searchInput" (input)="filterInvoices()"></app-invoice-search>
+  </div>
+  <div class="invoice-list">
+    <app-invoice-list [invoices]="filteredInvoices"></app-invoice-list>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+version: "3"
+services:
+  strapi:
+    build: .
+    container_name: invoice-backend
+    environment:
+      HOST: ${HOST}
+      PORT: ${PORT}
+      DB_CLIENT: ${DB_CLIENT}
+      DB_NAME: ${DB_NAME}
+      DB_HOST: postgres
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - "${PORT}:${PORT}"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "5432:5432"

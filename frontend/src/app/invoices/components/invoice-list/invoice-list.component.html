@@ -1,0 +1,27 @@
+  <table class="table-header">
+    <tr class="table-data">
+      <th class="align-left">No.</th>
+      <th class="align-left">Date</th>
+      <th class="align-left">Client</th>
+      <th class="align-right">Amount</th>
+      <th class="align-right">Status</th>
+    </tr>
+  </table>
+  <div class="scrollable-container">
+    <div class="container">
+      <table class="table-item">
+        <tr class="table-data" *ngFor="let invoice of invoices">
+          <td class="align-left">{{ invoice.attributes.key }}</td>
+          <td class="align-left">{{ invoice.attributes.dueDate }}</td>
+          <td class="align-left">{{ invoice.attributes.recipientEmail }}</td>
+          <td class="align-right">${{ calcTotalPrice(invoice.attributes.itemsList) }}</td>
+          <td class="align-button-right">
+            <app-invoice-status
+              status="{{ invoice.attributes.status }}"
+            ></app-invoice-status>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+

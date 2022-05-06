@@ -1,0 +1,16 @@
+<div class="nav">
+  <img class="nav-logo" src="/assets/logo.png" />
+  <div class="nav-items">
+    <a
+      class="nav-item"
+      [class.selected]="router.url === item.path"
+      *ngFor="let item of navItems"
+      [routerLink]="item.path"
+    >
+      <span *ngIf="item.iconTitle" class="material-icons-outlined">
+        {{ item.iconTitle }}
+      </span>
+      <a *ngIf="item.name" class="nav-anchor">{{ item.name }}</a>
+    </a>
+  </div>
+</div>

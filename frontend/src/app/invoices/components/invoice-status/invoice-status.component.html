@@ -1,0 +1,11 @@
+<div class="invoice-buttons-container">
+  <ng-container *ngIf="status == 'Paid'">
+    <app-btn-paid></app-btn-paid>
+  </ng-container>
+  <ng-container *ngIf="status == 'Pending'">
+    <app-btn-pending></app-btn-pending>
+  </ng-container>
+  <ng-container *ngIf="status == 'Draft'">
+    <app-btn-draft></app-btn-draft>
+  </ng-container>
+</div>

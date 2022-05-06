@@ -1,0 +1,34 @@
+<div class="invoice-container">
+  <div class="invoice-left">
+    <div class="invoice-recieved">
+      <p>TOTAL RECIEVED</p>
+    </div>
+    <div class="invoice-total">
+      <p>$</p>
+      <h2>{{ calculateTotalInvoices("Paid") }}</h2>
+    </div>
+    <div class="invoice-increase">
+      <p class="invoice-increase-text">+10% since last month</p>
+    </div>
+  </div>
+  <div class="invoice-right">
+    <div class="invoice-btn-container">
+      <div class="invoice-btn-pending">
+        <span class="invoice-btn-pending-bullet-point"></span>
+        <p class="invoice-btn-pending-text">Pending</p>
+      </div>
+      <div class="invoice-btn-pending-price">
+        <p>${{ calculateTotalInvoices("Pending") }}</p>
+      </div>
+    </div>
+    <div class="invoice-btn-container">
+      <div class="invoice-btn-draft">
+        <span class="invoice-btn-draft-bullet-point"></span>
+        <p class="invoice-btn-draft-text">In Drafts</p>
+      </div>
+      <div class="invoice-btn-draft-price">
+        <p>${{ calculateTotalInvoices("Draft") }}</p>
+      </div>
+    </div>
+  </div>
+</div>

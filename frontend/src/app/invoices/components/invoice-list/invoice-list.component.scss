@@ -1,0 +1,44 @@
+.table-item {
+  width: 100%;
+  padding: 0rem 0rem;
+  border-spacing: 0rem 1rem;
+}
+
+.table-header {
+  padding: 2rem 1rem 0 1rem;
+  width: 100%;
+  border-spacing: 0rem 1rem;
+
+}
+
+.container {
+  height: 350px;
+  overflow: auto;
+  width: 100%;
+}
+
+th {
+  padding: 0 2rem;
+}
+
+tr {
+  padding: 1rem 0rem;
+}
+
+td {
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.align-left {
+  text-align: start;
+}
+
+.align-right {
+  text-align: end;
+}
+
+.align-button-right {
+  display: flex;
+  justify-content: end;
+}

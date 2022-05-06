@@ -1,0 +1,12 @@
+<div class="invoice-search-form">
+    <div class="invoice-search">
+        <div class="search-icon">
+            <span class="material-icons-outlined h-100">search</span>
+        </div>
+        <input type="text" placeholder="Search an invoice" [(ngModel)]="inputModel" (ngModelChange)="inputModelChange.emit(inputModel)"/>
+    </div>
+    <div class="invoice-filter">
+        <button type="checkbox">show all</button>
+    </div>
+</div>
+  

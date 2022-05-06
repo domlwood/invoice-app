@@ -1,0 +1,45 @@
+.invoice-search-form {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.invoice {
+  &-search {
+    border: 2px solid rgb(228, 228, 228);
+    & .search-icon {
+      border: none;
+      background: white;
+      height: 32px;
+      padding: 0.25rem 0.5rem;
+      color: var(--grey-color);
+      &:focus {
+          outline: none;
+      }
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & input {
+        font-size: 18px;
+        &:focus {
+            outline: none;
+            .invoice-search {
+                    border: 2px solid var(--blue-color);
+            }
+        }
+      border: none;
+      height: 2.5rem;
+      width: 100%;
+    }
+    flex-grow: 5;
+  }
+  &-filter {
+    & button {
+      height: 2.5rem;
+      width: 100%;
+    }
+    flex-grow: 1;
+  }
+}

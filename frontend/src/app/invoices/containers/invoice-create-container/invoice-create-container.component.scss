@@ -1,0 +1,46 @@
+.container {
+    background-color: white;
+    height: 100%;
+    width: 45%;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 3rem;
+}
+
+.wrapper {
+    position: absolute;
+    width: 84%;
+    height: 100%;
+}
+
+.title-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    &-title {
+        padding-bottom: .5rem;
+    }
+    margin: 1.5rem 0;
+    & .text-input, .date-input {
+        font-size: 16px;
+        width: 100%;
+        padding: .5rem;
+    }
+    &-key {
+        margin: 2.5rem 0;
+    }
+    &-date {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        & .issue-date, .due-date {
+            width: 50%;
+        }
+    }
+
+    &-recurring {
+        display: flex;
+    }
+}

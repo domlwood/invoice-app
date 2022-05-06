@@ -1,0 +1,57 @@
+<div class="wrapper hidden">
+  <div class="container">
+    <div class="title-section">
+      <h2>Create new invoice</h2>
+      <p (click)="hideInvoiceCreatePopup()">X</p>
+    </div>
+    <form>
+      <div class="section-key section">
+          <h1>#AL2545</h1>
+        </div>
+      <div class="section-email section">
+          <p class="section-title">Recipient Email</p>
+          <input class="text-input" type="text" />
+    </div>
+      <div class="section-name section">
+        <p class="section-title">Project / Description</p>
+          <input class="text-input" type="text" />
+        </div>
+      <div class="section-date section">
+        <div class="issue-date">
+            <p class="section-title">Issued on</p>
+            <input class="date-input" type="date" />
+        </div>
+        <div class="due-date">
+            <p class="section-title">Due on</p>
+            <input class="date-input" type="date" />
+        </div>
+      </div>
+      <div class="section-recurring section">
+        <input class="checkbox-input" type="checkbox" />
+        <p class="section-title">this is a recurring type (monthly)</p>
+      </div>
+      <div class="section-items section">
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+          <tr *ngFor="let i of amountOfItems">
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            '
+            <td><p>100</p></td>
+          </tr>
+          <button (click)="implementAmountByOne()">Add More</button>
+        </table>
+        <div class="section-additional section">
+            <p class="section-title">Additional Notes</p>
+            <input class="text-input" type="text" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

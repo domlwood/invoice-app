@@ -1,0 +1,62 @@
+.container {
+  padding: 3rem 5rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  padding-bottom: 2rem;
+}
+
+.first-row {
+  display: flex;
+  gap: 3rem;
+}
+
+.column-one {
+  width: 50%;
+}
+
+.column-two {
+  flex-basis: 2;
+}
+
+.invoice-list {
+  width: 100%;
+}
+
+.invoice-create {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  &-button {
+    border: none;
+    background-color: var(--blue-color);
+    padding: 1.25rem 2rem;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    &:hover {
+      filter: brightness(0.95);
+      cursor: pointer;
+    }
+  }
+}
+
+.invoice-title-section {
+  line-height: 30px;
+}
+
+
+.invoice-create-popup {
+  height: 100%;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "unique": true
+    },
+    "recipientEmail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "issueDate": {
+      "type": "date"
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "recurring": {
+      "type": "boolean"
+    },
+    "itemsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "invoice.invoice-items"
+    },
+    "additionalNotes": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Paid",
+        "Pending",
+        "Draft"
+      ]
+    }
+  }
+}
